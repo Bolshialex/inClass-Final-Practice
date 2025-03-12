@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/global.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <div>
+        <h2 class="title">Personal Fitness Tracker</h2>
+      </div>
+
+      <div>
+        <form action="/summary" method="post">
+          <div class="form-div">
+            <label for="workoutType" class="label-field">Workout Type</label>
+            <select name="workoutType" class="input-field" id="workoutType">
+              <option value="Running">Running</option>
+              <option value="Weightlifting">Weightlifting</option>
+              <option value="Yoga">Yoga</option>
+              <option value="Cycling">Cycling</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-div">
+            <label for="duration" class="label-field">Duration (minutes)</label>
+            <input
+              type="text"
+              name="duration"
+              class="input-field"
+              id="duration"
+            />
+          </div>
+          <div class="form-div">
+            <label for="intensity" class="label-field">Intensity Level</label>
+            <div class="radio-div">
+              <label
+                ><input
+                  class="label-radio-field"
+                  type="radio"
+                  name="intensity"
+                  value="Low"
+                />Low</label
+              >
+              <label
+                ><input
+                  class="label-radio-field"
+                  type="radio"
+                  name="intensity"
+                  value="Medium"
+                />Medium</label
+              >
+              <label
+                ><input
+                  class="label-radio-field"
+                  type="radio"
+                  name="intensity"
+                  value="High"
+                />High</label
+              >
+            </div>
+          </div>
+          <div class="form-div">
+            <label for="date" class="label-field">Date</label>
+            <input type="date" name="date" id="date" class="input-field" />
+          </div>
+          <div class="form-div">
+            <label for="notes" class="label-field">Notes</label>
+            <textarea
+              name="notes"
+              id="notes"
+              class="input-field"
+              placeholder="Additional comments..."
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="form-div">
+            <button type="submit" class="form-btn">Log Workout</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

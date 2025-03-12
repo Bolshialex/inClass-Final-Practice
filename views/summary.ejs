@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary</title>
+    <link rel="stylesheet" href="styles/global.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <div>
+        <h2 class="title">Logged Workout</h2>
+        <hr />
+        <div class="inner-card">
+          <% workouts.forEach(workout => { %>
+          <div class="div-box">
+            <p class="title-values">
+              Workout Type:
+              <span class="text-value"><%= workout.workoutType %></span>
+            </p>
+            <p class="title-values">
+              Duration:
+              <span class="text-value"><%= workout.duration %> minutes</span>
+            </p>
+            <p class="title-values">
+              Intensity:
+              <span class="text-value"><%= workout.intensity %></span>
+            </p>
+            <p class="title-values">
+              Date:
+              <span class="text-value"
+                ><%= new Date(workout.date).toLocaleDateString('en-US', { year:
+                'numeric', month: 'long', day: 'numeric' }) %></span
+              >
+            </p>
+            <p class="title-values">
+              Notes: <span class="text-value"><%= workout.notes %></span>
+            </p>
+          </div>
+
+          <% }) %>
+        </div>
+      </div>
+      <div>
+        <a href="/">
+          <button type="button" class="form-btn">Log Another Workout</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
